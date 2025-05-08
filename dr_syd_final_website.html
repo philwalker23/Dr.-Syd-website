@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<!-- Final cleaned HTML with syd_grad_photo21_centered.png, countdown, flyer link, CV, and About Me -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dr. Syd Graduation & Career Hub</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Source Sans Pro', sans-serif;
+      background-color: #fff;
+      color: #111827;
+      scroll-behavior: smooth;
+      padding: 1rem;
+    }
+    h1, h2, h3 {
+      font-weight: 600;
+    }
+    .highlight {
+      color: #111827;
+    }
+    .accent {
+      color: #374151;
+    }
+    .rounded-soft {
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+
+<header class="text-center py-10">
+  <h1 class="text-5xl" style="font-family: 'Great Vibes', cursive;">Congratulations Dr. Syd!</h1>
+  <p class="text-xl accent mt-3">Incoming Dermatology Resident at Wayne State University</p>
+  <div class="flex justify-center mt-6">
+    <img src="syd_grad_photo21_centered.png" alt="Dr. Syd Graduation" class="rounded-soft shadow-xl w-2/3 object-cover">
+  </div>
+</header>
+
+<section id="gradfest" class="section-bg text-center max-w-4xl mx-auto py-10 px-4 rounded-lg shadow mb-10">
+  <h2 class="text-2xl font-semibold accent mb-2">Graduation Day Festivities</h2>
+  <div id="countdown" class="text-2xl font-semibold mt-4 text-gray-700"></div>
+  <p class="text-sm text-gray-500 mt-2">College of Medicine, May 9th @ 2:00 PM (Central Time)<br>Credit Union 1 Arena, 525 South Racine, Chicago, IL</p>
+  <a href="https://virtualgrad.tassel.com/uic/807/viii/?v=1745514121129" target="_blank" class="text-blue-600 underline mt-2 inline-block">Watch the Ceremony Virtually</a>
+  <br>
+  <a href="drsyd_graduation_flyer.pdf" target="_blank" class="text-pink-600 underline mt-2 inline-block">View Graduation Weekend Flyer</a>
+  <div class="mt-6 text-gray-700">
+    <h3 class="text-lg font-semibold">To my family and friends —</h3>
+    <p class="mt-2">
+      Thank you for showing up, for loving me through every step of this journey, and for making this moment unforgettable.
+      Your support has meant the world, and I wouldn’t be here without you. I love you all so much!
+    </p>
+    <p class="mt-4">
+      Your encouragement and positivity is more than enough, but if you want to make a contribution to my transition, feel free to
+      <a href="https://www.myregistry.com/wishlist/sydney-martin-chicago-il/4747454/giftlist" class="text-pink-500 hover:underline">purchase something from my wishlist</a>
+      or
+      <a href="https://cash.app/$iamsydddddd" class="text-green-600 font-semibold hover:underline">donate directly to my Cash App</a>.
+    </p>
+  </div>
+</section>
+
+<section id="cv" class="section-bg rounded-lg shadow-lg max-w-5xl mx-auto p-6 mb-10">
+  <h2 class="text-2xl font-semibold accent text-center mb-5">Curriculum Vitae</h2>
+  <div class="flex justify-center">
+    <a href="Syd_CV.pdf" target="_blank">
+      <img src="Syd_CV_preview.jpg" alt="Preview of Dr. Syd CV" class="rounded-soft shadow w-64 hover:opacity-90">
+    </a>
+  </div>
+</section>
+
+<section id="about" class="max-w-4xl mx-auto text-center mb-8">
+  <p class="text-gray-800">
+    Hi, I’m Syd — a new dermatology resident at Wayne State University and proud Detroit native! My journey through medicine hasn’t always been linear.
+    Like so many others, I’ve overcome my share of challenges — which is why I’m so passionate about using my voice and platform to uplift others.
+    <br><br>
+    I’m especially committed to caring for patients with hidradenitis suppurativa and increasing representation in dermatology.
+    I’m beyond excited to train at Wayne State where I get to serve the same communities that helped shape me.
+    <br><br>
+    I created this site as a space to connect — especially with other women in medicine, future doctors, and brands that care about impact.
+    I’m proud of how far I’ve come, and I hope sharing my story helps inspire the next generation of changemakers.
+  </p>
+</section>
+
+<script>
+  const targetDate = new Date("May 9, 2025 14:00:00 GMT-0500").getTime();
+  const countdownEl = document.getElementById("countdown");
+  setInterval(() => {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s until graduation 🎓`;
+  }, 1000);
+</script>
+
+</body>
+</html>
