@@ -7,7 +7,19 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Source Sans Pro', sans-serif; background-color: #ffffff; color: #111827; scroll-behavior: smooth; border: 4px double gold; padding: 1rem; position: relative; }
+    body {
+      font-family: 'Source Sans Pro', sans-serif;
+      background-color: #ffffff;
+      color: #111827;
+      scroll-behavior: smooth;
+      padding: 1rem;
+      position: relative;
+      background-image: linear-gradient(white, white), url('gold-border.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: 12px solid transparent;
+      box-shadow: 0 0 0 4px #d4af37, 0 0 0 8px white;
+    }
     h1, h2, h3 { font-weight: 600; }
     .highlight { color: #111827; }
     .accent { color: #374151; }
@@ -19,7 +31,7 @@
       position: absolute;
       width: 30px;
       height: 30px;
-      border: 4px solid gold;
+      border: 4px solid #d4af37;
       border-style: solid none none solid;
     }
     body::before {
@@ -58,10 +70,19 @@
 </header>
 
 <section id="about" class="max-w-4xl mx-auto text-center mb-8">
-  <div class="flex justify-center gap-4 mb-4">
-    <img src="syd_grad_photo1.jpg" alt="Dr. Syd Graduation 1" class="rounded-soft shadow-xl w-1/2 object-cover">
-    <img src="syd_grad_photo2.jpg" alt="Dr. Syd Graduation 2" class="rounded-soft shadow-xl w-1/2 object-cover object-center">
+  $1
+
+<section id="gradfest" class="section-bg text-center max-w-4xl mx-auto py-10 px-4 rounded-lg shadow mb-10">
+  <h2 class="text-2xl font-semibold accent mb-2">Graduation Day Festivities</h2>
+  <div id="countdown" class="text-2xl font-semibold mt-4 text-gray-700"></div>
+  <p class="text-sm text-gray-500 mt-2">College of Medicine, May 9th @ 2:00 PM (Chicago Time)<br>Credit Union 1 Arena, 525 South Racine, Chicago, IL</p>
+  <a href="https://virtualgrad.tassel.com/uic/807/viii/?v=1745514121129" target="_blank" class="text-blue-600 underline mt-2 inline-block">Watch the Ceremony Virtually</a>
+  <div class="mt-6 text-gray-700">
+    <h3 class="text-lg font-semibold">To my family and friends —</h3>
+    <p class="mt-2">Thank you for showing up, for loving me through every step of this journey, and for making this moment unforgettable. Your support has meant the world, and I wouldn’t be here without you. I love you all so much!</p>
+    <p class="mt-4">Your encouragement and positivity is more than enough, but if you want to make a contribution to my transition, feel free to <a href="https://www.myregistry.com/wishlist/sydney-martin-chicago-il/4747454/giftlist" target="_blank" class="text-pink-500 hover:underline">purchase something from my wishlist</a> or <a href="https://cash.app/$iamsydddddd" target="_blank" class="text-green-600 hover:underline font-semibold">donate via Cash App</a>.</p>
   </div>
+</section>
   <p class="text-gray-800">
     Hi, I’m Syd — a new dermatology resident at Wayne State University and proud Detroit native! My journey through medicine hasn’t always been linear. Like so many others, I’ve overcome my share of challenges — which is why I’m so passionate about using my voice and platform to uplift others.
     <br><br>
@@ -104,15 +125,7 @@
   </form>
 </section>
 
-<section id="wishlist" class="section-bg max-w-5xl mx-auto py-10 px-4 text-center rounded-lg shadow mb-10">
-  <h2 class="text-2xl font-semibold accent mb-4">Support Dr. Syd</h2>
-  <p class="text-lg text-gray-700 mb-4">
-    If you want to support Syd as she transitions from medical school to residency training, please feel free to
-    <a href="https://www.myregistry.com/wishlist/sydney-martin-chicago-il/4747454/giftlist" target="_blank" class="text-pink-500 hover:underline">purchase something from her wishlist</a>
-    or
-    <a href="https://cash.app/$iamsydddddd" target="_blank" class="text-green-600 hover:underline font-semibold text-xl">donate directly to her Cash App</a>.
-  </p>
-</section>
+
 
 <section id="cv" class="section-bg rounded-lg shadow-lg max-w-5xl mx-auto p-6 mb-10">
   <h2 class="text-2xl font-semibold accent text-center mb-5">Curriculum Vitae</h2>
@@ -172,28 +185,17 @@
   <a href="#social-stickers" class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-black transition text-sm">📸 Add a Sticker Before You Post!</a>
 </section>
 
-<section id="gradfest" class="section-bg text-center max-w-4xl mx-auto py-10 px-4 rounded-lg shadow mb-10">
-  <h2 class="text-2xl font-semibold accent mb-2">Graduation Day Festivities</h2>
-  <div id="countdown" class="text-2xl font-semibold mt-4 text-gray-700"></div>
-  <p class="text-sm text-gray-500 mt-2">College of Medicine, May 9th @ 2:00 PM (Chicago Time)<br>Credit Union 1 Arena, 525 South Racine, Chicago, IL</p>
-  <a href="https://virtualgrad.tassel.com/uic/807/viii/?v=1745514121129" target="_blank" class="text-blue-600 underline mt-2 inline-block">Watch the Ceremony Virtually</a>
-  <div class="mt-6 text-gray-700">
-    <h3 class="text-lg font-semibold">To my family and friends —</h3>
-    <p class="mt-2">Thank you for showing up, for loving me through every step of this journey, and for making this moment unforgettable. Your support has meant the world, and I wouldn’t be here without you. I love you all so much!</p>
-  </div>
-</section>
+
 
 <!-- Congratulations Wall -->
 <section id="social-stickers" class="section-bg text-center max-w-4xl mx-auto py-10 px-6 rounded-lg shadow mb-10">
-  <h2 class="text-2xl font-semibold accent mb-4">Leave a Message for Dr. Syd</h2>
-  <form id="shoutoutForm" class="mb-6 space-y-4">
-    <input type="text" placeholder="Your name" class="w-full border border-gray-300 rounded p-2" required>
-    <textarea maxlength="200" placeholder="Your congratulations message (200 character max)" rows="3" class="w-full border border-gray-300 rounded p-2" required></textarea>
-    <button type="submit" class="bg-black text-white py-2 px-4 rounded hover:bg-gray-800">Post Message</button>
-  </form>
-  <div id="shoutoutMessages" class="space-y-4 text-left max-w-xl mx-auto">
-    <p class="italic text-gray-500">Messages will appear here!</p>
+  <h2 class="text-2xl font-semibold accent mb-4">Share the Love on Social Media</h2>
+  <p class="text-gray-700 mb-4">Want to celebrate Dr. Syd on your story? Download her official graduation sticker below, tag her, and use the suggested hashtags to spread the love and get her noticed!</p>
+  <div class="flex flex-col items-center space-y-4">
+    <img src="drsyd_sticker.png" alt="Dr. Syd Official Sticker" class="rounded-soft shadow w-40">
+    <a href="drsyd_sticker.png" download class="bg-black text-white py-2 px-4 rounded hover:bg-gray-800">Download Sticker</a>
   </div>
+  <p class="text-sm text-gray-600 mt-6">Use hashtags like <strong>#DrSydDerm</strong>, <strong>#BlackDoctors</strong>, <strong>#WomenInMedicine</strong>, <strong>#HidradenitisSupport</strong>, <strong>#DetroitDerm</strong>, <strong>#MedGrad2025</strong>, and <strong>#RepresentationMatters</strong><br>— and tag <strong>@iamsydd</strong> to help her connect with brands, media, and future collaborators!</p>
 </section>
 
 <!-- Social Story Sharing Section -->
@@ -228,6 +230,21 @@
     </div>
   </div>
   <p class="text-sm text-gray-500 mt-6">Tag <strong>@iamsydd</strong> and use any of these hashtags to be featured!</p>
+</section>
+
+<!-- Story Preview & QR Code Section -->
+<section class="text-center max-w-4xl mx-auto py-10 px-6">
+  <h2 class="text-2xl font-semibold accent mb-4">Need Inspiration?</h2>
+  <p class="text-gray-700 mb-4">Here's how others are celebrating Dr. Syd!</p>
+  <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+    <img src="story_preview_1.png" alt="Instagram Story Example 1" class="rounded-soft shadow-md w-48">
+    <img src="story_preview_2.png" alt="Instagram Story Example 2" class="rounded-soft shadow-md w-48">
+    <img src="story_preview_3.png" alt="Instagram Story Example 3" class="rounded-soft shadow-md w-48">
+  </div>
+  <p class="text-gray-600 mt-6">Scan below to grab your sticker or share this site:</p>
+  <div class="flex justify-center mt-4">
+    <img src="drsyd_qrcode.png" alt="QR Code for Dr. Syd's Site" class="w-32 h-32 rounded-soft shadow">
+  </div>
 </section>
 
 <!-- RSVP Button -->
@@ -278,6 +295,16 @@ form.addEventListener('submit', function(e) {
     <a href="https://linktr.ee/iamsydd" target="_blank" class="accent hover:underline">Linktree</a>
     <a href="https://www.instagram.com/iamsydd" target="_blank" class="accent hover:underline">Instagram</a>
   </div>
+</footer>
+
+<div class="fixed bottom-4 left-4 right-4 z-50 md:hidden">
+  <a href="#social-stickers" class="block w-full text-center bg-black text-white py-3 rounded-full shadow-lg hover:bg-gray-800 transition">
+    📸 Post with a Sticker
+  </a>
+</div>
+
+<footer class="text-center py-6 mt-16">
+  <p class="text-gray-600 text-sm">Celebrating from home? Snap a photo, use a sticker, and post with <strong>#DrSydDerm</strong> so she can see and share your love!</p>
 </footer>
 
 </body>
