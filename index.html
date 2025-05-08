@@ -7,13 +7,30 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Source Sans Pro', sans-serif; background-color: #ffffff; color: #111827; scroll-behavior: smooth; }
+    body { font-family: 'Source Sans Pro', sans-serif; background-color: #ffffff; color: #111827; scroll-behavior: smooth; border: 4px double gold; padding: 1rem; position: relative; }
     h1, h2, h3 { font-weight: 600; }
     .highlight { color: #111827; }
     .accent { color: #374151; }
     .section-bg { background-color: #f9fafb; }
     img.rounded-soft { border-radius: 12px; }
     a.accent:hover { text-decoration: underline; color: #000000; }
+    body::before, body::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      border: 4px solid gold;
+      border-style: solid none none solid;
+    }
+    body::before {
+      top: 0;
+      left: 0;
+    }
+    body::after {
+      bottom: 0;
+      right: 0;
+      transform: rotate(180deg);
+    }
   </style>
 </head>
 <body>
@@ -46,11 +63,11 @@
     <img src="syd_grad_photo2.jpg" alt="Dr. Syd Graduation 2" class="rounded-soft shadow-xl w-1/2 object-cover object-center">
   </div>
   <p class="text-gray-800">
-    Hi, I’m Syd — a new dermatology resident at Wayne State University and proud Detroit native! My journey through medicine has been shaped by my commitment to community, advocacy, and mentorship. I’m especially passionate about caring for people with hidradenitis suppurativa and raising awareness for skin conditions that disproportionately affect people of color.
+    Hi, I’m Syd — a new dermatology resident at Wayne State University and proud Detroit native! My journey through medicine hasn’t always been linear. Like so many others, I’ve overcome my share of challenges — which is why I’m so passionate about using my voice and platform to uplift others.
     <br><br>
-    I’m thrilled to be training at Wayne State — not only because it’s a phenomenal dermatology program, but because it gives me the chance to care for the same communities I grew up in. There’s something incredibly powerful about coming full circle.
+    I’m especially committed to caring for patients with hidradenitis suppurativa and increasing representation in dermatology. I’m beyond excited to train at Wayne State where I get to serve the same communities that helped shape me.
     <br><br>
-    I’m also excited to connect with other current and future women in dermatology, and to build a medical community that uplifts and inspires. Whether you’re here as a fellow physician, student, patient, or brand — thank you for visiting! Let’s stay connected.
+    I created this site as a space to connect — especially with other women in medicine, future doctors, and brands that care about impact. I’m proud of how far I’ve come, and I hope sharing my story helps inspire the next generation of changemakers.
   </p>
   <div class="mt-6">
     <a href="#contact-form" class="inline-block bg-black text-white py-3 px-6 rounded hover:bg-gray-800 transition">Message Me</a>
@@ -151,10 +168,109 @@
   <a href="https://linktr.ee/iamsydd" target="_blank" class="inline-block mt-4 bg-black text-white py-2 px-4 rounded hover:bg-gray-800">Connect Now</a>
 </section>
 
+<section class="text-center mb-6">
+  <a href="#social-stickers" class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-black transition text-sm">📸 Add a Sticker Before You Post!</a>
+</section>
+
 <section id="gradfest" class="section-bg text-center max-w-4xl mx-auto py-10 px-4 rounded-lg shadow mb-10">
   <h2 class="text-2xl font-semibold accent mb-2">Graduation Day Festivities</h2>
-  <p class="text-gray-600">Stay tuned for itinerary details and special event announcements celebrating Dr. Syd!</p>
+  <div id="countdown" class="text-2xl font-semibold mt-4 text-gray-700"></div>
+  <p class="text-sm text-gray-500 mt-2">College of Medicine, May 9th @ 2:00 PM (Chicago Time)<br>Credit Union 1 Arena, 525 South Racine, Chicago, IL</p>
+  <a href="https://virtualgrad.tassel.com/uic/807/viii/?v=1745514121129" target="_blank" class="text-blue-600 underline mt-2 inline-block">Watch the Ceremony Virtually</a>
+  <div class="mt-6 text-gray-700">
+    <h3 class="text-lg font-semibold">To my family and friends —</h3>
+    <p class="mt-2">Thank you for showing up, for loving me through every step of this journey, and for making this moment unforgettable. Your support has meant the world, and I wouldn’t be here without you. I love you all so much!</p>
+  </div>
 </section>
+
+<!-- Congratulations Wall -->
+<section id="social-stickers" class="section-bg text-center max-w-4xl mx-auto py-10 px-6 rounded-lg shadow mb-10">
+  <h2 class="text-2xl font-semibold accent mb-4">Leave a Message for Dr. Syd</h2>
+  <form id="shoutoutForm" class="mb-6 space-y-4">
+    <input type="text" placeholder="Your name" class="w-full border border-gray-300 rounded p-2" required>
+    <textarea maxlength="200" placeholder="Your congratulations message (200 character max)" rows="3" class="w-full border border-gray-300 rounded p-2" required></textarea>
+    <button type="submit" class="bg-black text-white py-2 px-4 rounded hover:bg-gray-800">Post Message</button>
+  </form>
+  <div id="shoutoutMessages" class="space-y-4 text-left max-w-xl mx-auto">
+    <p class="italic text-gray-500">Messages will appear here!</p>
+  </div>
+</section>
+
+<!-- Social Story Sharing Section -->
+<section class="section-bg text-center max-w-4xl mx-auto py-10 px-6 rounded-lg shadow mb-10">
+  <h2 class="text-2xl font-semibold accent mb-4">Share the Love on Social Media</h2>
+  <p class="text-gray-700 mb-4">Want to celebrate Dr. Syd on your story? Download one of her custom graduation stickers below and tag her to show love!</p>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 justify-center">
+    <div class="flex flex-col items-center">
+      <img src="sticker_detroitmade.png" alt="#DetroitMade" class="rounded-soft shadow w-32">
+      <p class="mt-2 text-sm">#DetroitMade</p>
+      <a href="sticker_detroitmade.png" download class="text-blue-600 underline">Download</a>
+    </div>
+    <div class="flex flex-col items-center">
+      <img src="sticker_blackgirlmagic.png" alt="#BlackGirlMagic" class="rounded-soft shadow w-32">
+      <p class="mt-2 text-sm">#BlackGirlMagic</p>
+      <a href="sticker_blackgirlmagic.png" download class="text-blue-600 underline">Download</a>
+    </div>
+    <div class="flex flex-col items-center">
+      <img src="sticker_aka.png" alt="#AlphaKappaAlpha" class="rounded-soft shadow w-32">
+      <p class="mt-2 text-sm">#AlphaKappaAlpha</p>
+      <a href="sticker_aka.png" download class="text-blue-600 underline">Download</a>
+    </div>
+    <div class="flex flex-col items-center">
+      <img src="sticker_dermatology.png" alt="#Dermatology" class="rounded-soft shadow w-32">
+      <p class="mt-2 text-sm">#Dermatology</p>
+      <a href="sticker_dermatology.png" download class="text-blue-600 underline">Download</a>
+    </div>
+    <div class="flex flex-col items-center">
+      <img src="sticker_womeninmedicine.png" alt="#WomenInMedicine" class="rounded-soft shadow w-32">
+      <p class="mt-2 text-sm">#WomenInMedicine</p>
+      <a href="sticker_womeninmedicine.png" download class="text-blue-600 underline">Download</a>
+    </div>
+  </div>
+  <p class="text-sm text-gray-500 mt-6">Tag <strong>@iamsydd</strong> and use any of these hashtags to be featured!</p>
+</section>
+
+<!-- RSVP Button -->
+<section class="text-center mb-10">
+  <a href="#contact-form" class="bg-black text-white py-3 px-6 rounded-full hover:bg-gray-800 text-lg transition">RSVP to Celebrate</a>
+</section>
+
+<!-- Brand Partnership Section -->
+<section class="section-bg text-center max-w-5xl mx-auto py-12 px-6 rounded-lg shadow mb-10">
+  <h2 class="text-2xl font-semibold accent mb-4">Interested in Partnering?</h2>
+  <p class="text-gray-700 mb-6 max-w-3xl mx-auto">
+    Dr. Syd is passionate about collaborating with skincare, wellness, and lifestyle brands that align with her mission to empower and educate. Whether you’re interested in partnerships, sponsored content, or media appearances, she’s excited to connect and create meaningful impact together.
+  </p>
+  <a href="#contact-form" class="inline-block bg-black text-white py-3 px-6 rounded hover:bg-gray-800 transition">Start the Conversation</a>
+</section>
+<script>
+  const targetDate = new Date("May 9, 2025 14:00:00 GMT-0500").getTime();
+  const countdownEl = document.getElementById("countdown");
+  setInterval(() => {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s until graduation 🎓`;
+  }, 1000);
+
+  const form = document.getElementById('shoutoutForm');
+const messages = document.getElementById('shoutoutMessages');
+const emojiSet = ['🎉', '💖', '🙌🏾', '🌟', '🔥', '🎓'];
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = form.querySelector('input').value;
+    const msg = form.querySelector('textarea').value;
+    const emoji = emojiSet[Math.floor(Math.random() * emojiSet.length)];
+    const entry = document.createElement('div');
+    entry.className = 'bg-white p-3 rounded-soft shadow';
+    entry.innerHTML = `<strong>${name}:</strong> <p class='text-gray-700 mt-1'>${msg} ${emoji}</p>`;
+    messages.appendChild(entry);
+    form.reset();
+  });
+</script>
 
 <footer class="text-center py-6">
   <p class="text-gray-700">Follow Dr. Syd</p>
