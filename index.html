@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<!-- Final cleaned HTML with syd_grad_photo21_centered.png, countdown, flyer link, CV, and About Me -->
+<!-- Updated HTML: Countdown replaced with residency start, added beauty collab and contact section, removed grad links -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -40,26 +39,10 @@
   </div>
 </header>
 
-<section id="gradfest" class="section-bg text-center max-w-4xl mx-auto py-10 px-4 rounded-lg shadow mb-10">
-  <h2 class="text-2xl font-semibold accent mb-2">Graduation Day Festivities</h2>
+<section id="residency" class="section-bg text-center max-w-4xl mx-auto py-10 px-4 rounded-lg shadow mb-10">
+  <h2 class="text-2xl font-semibold accent mb-2">Residency Starts In</h2>
   <div id="countdown" class="text-2xl font-semibold mt-4 text-gray-700"></div>
-  <p class="text-sm text-gray-500 mt-2">College of Medicine, May 9th @ 2:00 PM (Central Time)<br>Credit Union 1 Arena, 525 South Racine, Chicago, IL</p>
-  <a href="https://virtualgrad.tassel.com/uic/807/viii/?v=1745514121129" target="_blank" class="text-blue-600 underline mt-2 inline-block">Watch the Ceremony Virtually</a>
-  <br>
-  <a href="drsyd_graduation_flyer.pdf" target="_blank" class="text-pink-600 underline mt-2 inline-block">View Graduation Weekend Flyer</a>
-  <div class="mt-6 text-gray-700">
-    <h3 class="text-lg font-semibold">To my family and friends —</h3>
-    <p class="mt-2">
-      Thank you for showing up, for loving me through every step of this journey, and for making this moment unforgettable.
-      Your support has meant the world, and I wouldn’t be here without you. I love you all so much!
-    </p>
-    <p class="mt-4">
-      Your encouragement and positivity is more than enough, but if you want to make a contribution to my transition, feel free to
-      <a href="https://www.myregistry.com/wishlist/sydney-martin-chicago-il/4747454/giftlist" class="text-pink-500 hover:underline">purchase something from my wishlist</a>
-      or
-      <a href="https://cash.app/$iamsydddddd" class="text-green-600 font-semibold hover:underline">donate directly to my Cash App</a>.
-    </p>
-  </div>
+  <p class="text-sm text-gray-500 mt-2">Dermatology Residency at Wayne State begins July 1st, 2025</p>
 </section>
 
 <section id="cv" class="section-bg rounded-lg shadow-lg max-w-5xl mx-auto p-6 mb-10">
@@ -69,6 +52,15 @@
       <img src="Syd_CV_preview.jpg" alt="Preview of Dr. Syd CV" class="rounded-soft shadow w-64 hover:opacity-90">
     </a>
   </div>
+</section>
+
+<section id="beauty" class="max-w-4xl mx-auto text-center mb-10">
+  <h2 class="text-2xl font-semibold accent mb-4">Skincare & Beauty Collaborations</h2>
+  <p class="text-gray-800">
+    As a dermatology resident passionate about skin health and beauty, I'm always excited to partner with brands that share my vision:
+    high-quality, inclusive products that promote healthy skin for all. If you’re a brand looking to collaborate—whether through product campaigns,
+    educational content, or community initiatives—feel free to reach out. Let’s create something beautiful together.
+  </p>
 </section>
 
 <section id="about" class="max-w-4xl mx-auto text-center mb-8">
@@ -84,8 +76,28 @@
   </p>
 </section>
 
+<section id="contact" class="bg-gray-50 py-10">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-2xl font-semibold accent mb-4">Contact Me</h2>
+    <form class="space-y-4">
+      <input type="text" placeholder="Name" class="w-full p-3 border rounded-soft" required />
+      <input type="email" placeholder="Email" class="w-full p-3 border rounded-soft" required />
+      <select class="w-full p-3 border rounded-soft">
+        <option value="">I am a...</option>
+        <option value="physician">Physician</option>
+        <option value="med_student">Medical Student</option>
+        <option value="pre_med">Pre-Med Student</option>
+        <option value="influencer">Influencer/Media</option>
+        <option value="other">Other</option>
+      </select>
+      <textarea placeholder="Your message" class="w-full p-3 border rounded-soft" rows="4"></textarea>
+      <button type="submit" class="bg-pink-500 text-white px-6 py-2 rounded-soft hover:bg-pink-600">Send</button>
+    </form>
+  </div>
+</section>
+
 <script>
-  const targetDate = new Date("May 9, 2025 14:00:00 GMT-0500").getTime();
+  const targetDate = new Date("July 1, 2025 00:00:00 GMT-0400").getTime();
   const countdownEl = document.getElementById("countdown");
   setInterval(() => {
     const now = new Date().getTime();
@@ -94,7 +106,7 @@
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s until graduation 🎓`;
+    countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s until residency begins 🩺`;
   }, 1000);
 </script>
 
