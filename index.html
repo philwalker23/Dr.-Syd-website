@@ -56,7 +56,7 @@
 <section id="beauty" class="max-w-4xl mx-auto text-center mb-10">
   <h2 class="text-2xl font-semibold accent mb-4">Skincare & Beauty Collaborations</h2>
   <p class="text-gray-800">
-    As an incoming dermatology resident passionate about skin health and beauty, I'm always excited to partner with brands that share my vision:
+    As a dermatology resident passionate about skin health and beauty, I'm always excited to partner with brands that share my vision:
     high-quality, inclusive products that promote healthy skin for all. If you’re a brand looking to collaborate—whether through product campaigns,
     educational content, or community initiatives—feel free to reach out. Let’s create something beautiful together.
   </p>
@@ -82,7 +82,7 @@
       <h3 class="text-xl font-semibold text-gray-800">Pathway to Medicine: Uplifting Future Physicians</h3>
       <p class="text-sm text-gray-600">Southfield Public Schools · March 2025</p>
       <p class="text-gray-700 mt-2">
-        Delivered an interactive skin health session to high school students as part of a collaborative outreach with Wayne State Dermatology and The Etiquette Series.
+        Delivered an interactive skin health session to middle school students as part of a collaborative outreach with Wayne State Dermatology and The Etiquette Series.
       </p>
     </div>
     <div class="bg-gray-100 p-4 rounded-soft shadow">
@@ -98,10 +98,10 @@
 <section id="contact" class="bg-gray-50 py-10">
   <div class="max-w-3xl mx-auto text-center">
     <h2 class="text-2xl font-semibold accent mb-4">Contact Me</h2>
-    <form class="space-y-4">
-      <input type="text" placeholder="Name" class="w-full p-3 border rounded-soft" required />
-      <input type="email" placeholder="Email" class="w-full p-3 border rounded-soft" required />
-      <select class="w-full p-3 border rounded-soft">
+    <form action="https://formspree.io/f/mqaqjppj" method="POST" class="space-y-4">
+      <input type="text" name="name" placeholder="Name" class="w-full p-3 border rounded-soft" required />
+      <input type="email" name="email" placeholder="Email" class="w-full p-3 border rounded-soft" required />
+      <select name="role" class="w-full p-3 border rounded-soft">
         <option value="">I am a...</option>
         <option value="physician">Physician</option>
         <option value="med_student">Medical Student</option>
@@ -109,7 +109,7 @@
         <option value="influencer">Influencer/Media</option>
         <option value="other">Other</option>
       </select>
-      <textarea placeholder="Your message" class="w-full p-3 border rounded-soft" rows="4"></textarea>
+      <textarea name="message" placeholder="Your message" class="w-full p-3 border rounded-soft" rows="4"></textarea>
       <button type="submit" class="bg-pink-500 text-white px-6 py-2 rounded-soft hover:bg-pink-600">Send</button>
     </form>
   </div>
